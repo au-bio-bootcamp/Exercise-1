@@ -39,7 +39,7 @@ Assessing Quality and QC of FASTQ files using the FASTX-Toolkit
    ```
 
 9. We will generate the boxplot graphs of the quality score statistics for each read set next:
-   1. “fastq_quality_boxplot_graph.sh –help” (to get a listing of available options)
+   1. `fastq_quality_boxplot_graph.sh –help` (to get a listing of available options)
    2. the two minimal options that you will need to provide the fastq_quality_boxplot_graph.sh command with are:
       1. –i <INFILE_NAME>.stats
       2. –o <OUTFILE_NAME>.png
@@ -62,7 +62,7 @@ Assessing Quality and QC of FASTQ files using the FASTX-Toolkit
    5. `cp /home/shared/biobootcamp/data/Various/qual_score_boxplot_explained_2018.pdf .` (what did you just do in this command (i.e., remember what the “.” at the end means)?). Now download this PDF to your laptop link you did for the `*.png` files above for a further explanation and interpretation of quality score boxplots.
 
 15. Let’s see how the boxplots change once QC is introduced into the equation. NOTE: for this part of the exercise, pair with another person in your group. Discuss with them 1) potential options to use for (b) below, 2) what options might be most appropriate given the data and 3) independently execute the same commands (i.e., act as each other’s “control” in this experiment).
-   1. “fastq_quality_trimmer –help” (to get a listing of available options)
+   1. `fastq_quality_trimmer –help` (to get a listing of available options)
    2. the five options that you will need to provide the fastq_quality_trimmer command with are:
       1. –i <INFILE_NAME>.fastq
       2. –o <OUTFILE_NAME>.QCed.fastq
@@ -73,7 +73,7 @@ Assessing Quality and QC of FASTQ files using the FASTX-Toolkit
 
 16. Now add these two fastq_quality_trimmer commands to the beginning of the workflow in your FASTX_example.sh script. You can keep your other four previous commands from above BUT edit them by: 1) changing their input flags to use the appropriate `*.QCed.fastq` files and 2) modifying their subsequent output `*.stats` and `*.png` file names (i.e., so you can distinguish them from the ones you originally created in #8 and #9). NOTE: the sequential order of the commands is important, so (a) trim first, (b) produce stats for trimmed data next and (c) graph those stats last. Save your script and exit out of nano. Now submit it to the ASC queue system using the directions at the end of the script like you did in Step #11 above.
 
-17. Monitor your job using “squeue” and watching for new content (i.e., creation of the two new `*.fastq`, `*.stats` and `*.png` files) in the working directory.
+17. Monitor your job using `squeue` and watching for new content (i.e., creation of the two new `*.fastq`, `*.stats` and `*.png` files) in the working directory.
 
 18. Once the job is complete, transfer the two new `*.png` files to your own computer and open them in any image viewer or web browser. Also open the two original `*.png` files from #13.
 
