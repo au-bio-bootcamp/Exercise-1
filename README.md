@@ -27,7 +27,7 @@ Assessing Quality and QC of FASTQ files using the FASTX-Toolkit
 
 8. To generate boxplot graphs of quality for each of the read sets using the FASTX-Toolkit, you will first need to generate statistics for each read set. This can be done in the following manner:
    1. `module load fastx/0.0.14` (to load the FASTX-Toolkit into your workspace)
-   2. `fastx_quality_stats --help` (to get a listing of available options, also “fast” with tab complete to see all modules)
+   2. `fastx_quality_stats -h` (to get a listing of available options, also “fast” with tab complete to see all modules)
    3. the three options that you will need to provide the fastx_quality_stats command with are:
       1. –i <INFILE_NAME>.fastq
       2. –o <OUTFILE_NAME>.stats
