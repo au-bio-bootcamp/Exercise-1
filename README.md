@@ -54,12 +54,12 @@ Assessing Quality and QC of FASTQ files using the FASTX-Toolkit
 
 13. Once the job is complete, download the two `*.png` files to your laptop and open them in any image viewer or web browser.
 
-14. As you examine the boxplots, answer the following questions
-   1. What are the x- and y-axes?
-   2. What do the boxplots represent at each interval?
-   3. Do the two graphs look similar or different?
-   4. How do they differ from each other?
-   5. `cp /home/shared/biobootcamp/data/Various/qual_score_boxplot_explained_2018.pdf .` (what did you just do in this command (i.e., remember what the “.” at the end means)?). Now download this PDF to your laptop link you did for the `*.png` files above for a further explanation and interpretation of quality score boxplots.
+14. As you examine the boxplots, answer the following questions:
+      1. What are the x- and y-axes?
+      2. What do the boxplots represent at each interval?
+      3. Do the two graphs look similar or different?
+      4. How do they differ from each other?
+      5. `cp /home/shared/biobootcamp/data/Various/qual_score_boxplot_explained_2018.pdf .` (what did you just do in this command (i.e., remember what the “.” at the end means)?). Now download this PDF to your laptop link you did for the `*.png` files above for a further explanation and interpretation of quality score boxplots.
 
 15. Let’s see how the boxplots change once QC is introduced into the equation. NOTE: for this part of the exercise, pair with another person in your group. Discuss with them 1) potential options to use for (b) below, 2) what options might be most appropriate given the data and 3) independently execute the same commands (i.e., act as each other’s “control” in this experiment).
    1. `fastq_quality_trimmer –help` (to get a listing of available options)
