@@ -54,7 +54,7 @@ Assessing Quality and QC of FASTQ files using the FASTX-Toolkit
 
 13. Once the job is complete, download the two `*.png` files to your laptop and open them in any image viewer or web browser.
 
-14. As you examine the boxplots, answer the following questions:
+14. As you examine the boxplots, answer the following questions
    1. What are the x- and y-axes?
    2. What do the boxplots represent at each interval?
    3. Do the two graphs look similar or different?
