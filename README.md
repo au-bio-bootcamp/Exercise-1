@@ -23,7 +23,7 @@ Assessing Quality and QC of FASTQ files using the FASTX-Toolkit
     1. `cp /home/shared/biobootcamp/data/Lamellibrachia_luymesi_sequence_reads_for_assembly/Lamellibrachia_luymesi_transcriptomic_sub1M_L001_R1_001.fastq .`
     2. `cp /home/shared/biobootcamp/data/Lamellibrachia_luymesi_sequence_reads_for_assembly/Lamellibrachia_luymesi_transcriptomic_sub1M_L001_R2_001.fastq . `
 
-7. Quantify the number of reads in each file and error check them using `wc -l` and `fastQValidator`, respectively, and make note of what they are. For `fastQValidator`, run the command without any flags or a filename to receive a Help message and options on how to run the program and the error check (i.e., see the ‘Examples’ section in the Help message).
+7. Quantify the number of reads in each file and error check them using `wc -l` and `fastQValidator` (https://github.com/statgen/fastQValidator), respectively, and make note of what they are. For `fastQValidator`, run the command without any flags or a filename to receive a Help message and options on how to run the program and the error check (i.e., see the ‘Examples’ section in the Help message).
 
 8. To generate boxplot graphs of quality for each of the read sets using the FASTX-Toolkit, you will first need to generate statistics for each read set. This can be done in the following manner:
     1. `module load fastx/0.0.14` (to load the FASTX-Toolkit into your workspace)
@@ -32,7 +32,7 @@ Assessing Quality and QC of FASTQ files using the FASTX-Toolkit
         1. –i <INFILE_NAME>.fastq
         2. –o <OUTFILE_NAME>.stats
         3. –Q33 (this tells fastx_quality_stats to use Phred 33 as the quality score range)
-    4. Draft your two fastx_quality_stats commands by writing them out by hand. Do not execute them, just write them down to add to your script shortly. A hint for the first one is below. NOTE: the backslash (\) placed at the end of the first line below means “continue to the next line” when the script is read by the system. Thus, the command below is considered a single line but can be broken up in your script like this in order to increase legibility:
+    4. Draft your two fastx_quality_stats commands by writing them out by hand. Do not execute them, just write them down to add to your script shortly. A hint for the first one is below. NOTE: the backslash (\\) placed at the end of the first line below means “continue to the next line” when the script is read by the system. Thus, the command below is considered a single line but can be broken up in your script like this in order to increase legibility:
    ```bash
    fastx_quality_stats -Q33 -i Lamellibrachia_luymesi_transcriptomic_sub1M_L001_R1_001.fastq \
        -o Lamellibrachia_luymesi_transcriptomic_sub1M_L001_R1_001.stats
@@ -48,7 +48,7 @@ Assessing Quality and QC of FASTQ files using the FASTX-Toolkit
 
 10. Once you have outlined your commands, add them to the appropriate section of the `FASTX_example.sh` script using nano (you should have 4 similar, but different, commands, each on a separate line, in your script file when you are done).
 
-11. Save your script and exit out of nano. Review the [ASC Queue Tutorial](https://au-bio-bootcamp.github.io/using_asc.html) and submit the script to the ASC queue system using the directions at the bottom of the script.
+11. Save your script and exit out of nano. Review the [ASC Queue Tutorial](https://github.com/au-bio-bootcamp/au-bio-bootcamp.github.io/blob/master/ASC_Queue_System_Tutorial.pdf) and submit the script to the ASC queue system using the directions at the bottom of the script.
 
 12. Monitor your job using `squeue` and watching for new content (i.e., creation of the two `*.stats` and `*.png` files) in the working directory.
 
@@ -85,4 +85,4 @@ Assessing Quality and QC of FASTQ files using the FASTX-Toolkit
     4. How does one “control” for the impact that QC might have on downstream analyses?
 
 Notes:
-Everyone has a symlink or shortcut to the shared bootcamp directory called “shared” in their home folder. As in examples above we can type “shared” in place of the absolute path `/home/shared/biobootcamp/` e.g., `cat shared/data/` example_ASC_queue_scripts/FASTX_example.sh for this exercise and all other bootcamp activities this week. If you aren’t currently in your home directory we use ~/shared, where the tilde always means your home directory.
+Everyone has a symlink or shortcut to the shared bootcamp directory called “shared” in their home folder. As in examples above we can type “shared” in place of the absolute path `/home/shared/biobootcamp/` e.g., `ls biobootcamp/data/` example_ASC_queue_scripts/FASTX_example.sh for this exercise and all other bootcamp activities this week. If you aren’t currently in your home directory we use ~/biobootcamp, where the tilde always means your home directory.
