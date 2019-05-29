@@ -1,7 +1,7 @@
 # Small Group Exercise #1:
 Assessing Quality and QC of FASTQ files using the FASTX-Toolkit
 
-1. Explore the documentation for the FASTX-Toolkit using the documentation at [http://hpcdocs.asc.edu](http://hpcdocs.asc.edu).
+1. Explore the documentation for the FASTX-Toolkit using the documentation at [https://hpcdocs.asc.edu](http://hpcdocs.asc.edu).
     1. Login to the portal.
     2. Select ‘Other bioinformatics’  from left menu
     3. Select ‘Fastx-Toolkit’ and read the documentation
