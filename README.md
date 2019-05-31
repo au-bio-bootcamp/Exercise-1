@@ -34,7 +34,9 @@ Assessing Quality and QC of FASTQ files using the FASTX-Toolkit
         3. `–Q33` (this tells fastx_quality_stats to use Phred 33 as the quality score range)
     4. Draft your two fastx_quality_stats commands by writing them out by hand. Do not execute them, just write them down to add to your script shortly. A hint for the first one is below. NOTE: the backslash `\` placed at the end of the first line below means “continue to the next line” when the script is read by the system. Thus, the command below is considered a single line but can be broken up in your script like this in order to increase legibility:
    ```bash
-   fastx_quality_stats -Q33 -i Lamellibrachia_luymesi_transcriptomic_sub1M_L001_R1_001.fastq \
+   fastx_quality_stats \
+       -Q33 \
+       -i Lamellibrachia_luymesi_transcriptomic_sub1M_L001_R1_001.fastq \
        -o Lamellibrachia_luymesi_transcriptomic_sub1M_L001_R1_001.stats
    ```
 
