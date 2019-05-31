@@ -29,9 +29,9 @@ Assessing Quality and QC of FASTQ files using the FASTX-Toolkit
     1. `module load fastx/0.0.14` (to load the FASTX-Toolkit into your workspace)
     2. `fastx_quality_stats -h` (to get a listing of available options, also “fast” with tab complete to see all modules)
     3. the three options that you will need to provide the fastx_quality_stats command with are:
-        1. –i <INFILE_NAME>.fastq
-        2. –o <OUTFILE_NAME>.stats
-        3. –Q33 (this tells fastx_quality_stats to use Phred 33 as the quality score range)
+        1. `–i <INFILE_NAME>.fastq`
+        2. `–o <OUTFILE_NAME>.stats`
+        3. `–Q33` (this tells fastx_quality_stats to use Phred 33 as the quality score range)
     4. Draft your two fastx_quality_stats commands by writing them out by hand. Do not execute them, just write them down to add to your script shortly. A hint for the first one is below. NOTE: the backslash `\` placed at the end of the first line below means “continue to the next line” when the script is read by the system. Thus, the command below is considered a single line but can be broken up in your script like this in order to increase legibility:
    ```bash
    fastx_quality_stats -Q33 -i Lamellibrachia_luymesi_transcriptomic_sub1M_L001_R1_001.fastq \
@@ -41,8 +41,8 @@ Assessing Quality and QC of FASTQ files using the FASTX-Toolkit
 9. We will generate the boxplot graphs of the quality score statistics for each read set next:
     1. `fastq_quality_boxplot_graph.sh –help` (to get a listing of available options)
     2. the two minimal options that you will need to provide the fastq_quality_boxplot_graph.sh command with are:
-        1. –i <INFILE_NAME>.stats
-        2. –o <OUTFILE_NAME>.png
+        1. `–i <INFILE_NAME>.stats`
+        2. `–o <OUTFILE_NAME>.png`
     3. Draft your two `fastq_quality_boxplot_graph.sh` commands out by hand. Use the example above as a starting point.
 
 
@@ -65,11 +65,11 @@ Assessing Quality and QC of FASTQ files using the FASTX-Toolkit
     1. If you logged out of the ASC in the previous step you will need to run `module load fastx/0.0.14` again.
     1. `fastq_quality_trimmer –help` (to get a listing of available options)
     2. the five options that you will need to provide the fastq_quality_trimmer command with are:
-        1. –i <INFILE_NAME>.fastq
-        2. –o <OUTFILE_NAME>.QCed.fastq
-        3. –Q33 (see #8 above for details)
-        4. –t (see `fastq_quality_trimmer –help` for definition and potential values)
-        5. –l (see `fastq_quality_trimmer –help` for definition and potential values)
+        1. `–i <INFILE_NAME>.fastq`
+        2. `–o <OUTFILE_NAME>.QCed.fastq`
+        3. `–Q33 (see #8 above for details)`
+        4. `–t` (see `fastq_quality_trimmer –help` for definition and potential values)
+        5. `–l` (see `fastq_quality_trimmer –help` for definition and potential values)
     3. Draft your two fastq_quality_trimmer commands out on paper.
 
 16. Now add these two fastq_quality_trimmer commands to the beginning of the workflow in your FASTX_example.sh script. You can keep your other four previous commands from above BUT edit them by: 1) changing their input flags to use the appropriate `*.QCed.fastq` files and 2) modifying their subsequent output `*.stats` and `*.png` file names (i.e., so you can distinguish them from the ones you originally created in #8 and #9). NOTE: the sequential order of the commands is important, so (a) trim first, (b) produce stats for trimmed data next and (c) graph those stats last. Save your script and exit out of nano. Now submit it to the ASC queue system using the directions at the end of the script like you did in Step #11 above.
