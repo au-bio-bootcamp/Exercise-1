@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-source /opt/asn/etc/asn-bash-profiles-special/modules.sh
+
 module load fastx/0.0.14
+
 # place fastx commands after this line
 
 
