@@ -85,4 +85,4 @@ Assessing Quality and QC of FASTQ files using the FASTX-Toolkit
     4. How does one “control” for the impact that QC might have on downstream analyses?
 
 Notes:
-Everyone has a symlink or shortcut to the shared bootcamp directory called “shared” in their home folder. As in examples above we can type “shared” in place of the absolute path `/home/shared/biobootcamp/` e.g., `ls biobootcamp/data/` example_ASC_queue_scripts/FASTX_example.sh for this exercise and all other bootcamp activities this week. If you aren’t currently in your home directory we use ~/biobootcamp, where the tilde always means your home directory.
+Everyone has a symlink or shortcut to the shared bootcamp directory called “shared” in their home folder. As in examples above we can type “shared” in place of the absolute path `/home/shared/biobootcamp/` e.g., `ls biobootcamp/data/ example_ASC_queue_scripts/FASTX_example.sh` for this exercise and all other bootcamp activities this week. If you aren’t currently in your home directory we use ~/biobootcamp, where the tilde always means your home directory.
