@@ -50,7 +50,7 @@ Assessing Quality and QC of FASTQ files using the FASTX-Toolkit
 
 10. Once you have outlined your commands, add them to the appropriate section of the `FASTX_example.sh` script using nano (you should have 4 similar, but different, commands, each on a separate line, in your script file when you are done).
 
-11. Save your script and exit out of nano. Review the [ASC Queue Tutorial](https://github.com/au-bio-bootcamp/au-bio-bootcamp.github.io/blob/master/ASC_Queue_System_Tutorial.pdf) and submit the script to the ASC queue system using the directions at the bottom of the script.
+11. Save your script and exit out of nano. Review the [ASC Queue Tutorial](https://github.com/au-bio-bootcamp/au-bio-bootcamp.github.io/blob/master/asc_queue_system_tutorial.pdf) and submit the script to the ASC queue system using the directions at the bottom of the script.
 
 12. Monitor your job using `squeue` and watching for new content (i.e., creation of the two `*.stats` and `*.png` files) in the working directory.
 
